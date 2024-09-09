@@ -1,11 +1,12 @@
 import os
-import os.path
+from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Dict, List, Tuple, Union
 
+import torch
 from PIL import Image
-
 from torch.utils.data import Dataset
+from torchvision.transforms.functional import pil_to_tensor
 
 
 class DatasetFolder(Dataset):
@@ -148,3 +149,41 @@ class DatasetFolder(Dataset):
 
     def __len__(self) -> int:
         return len(self.samples)
+
+
+@dataclass
+class MyCustomCollator:
+    resolution: int = 64
+
+    def __call__(self, samples):
+        # Convert RGB --> Gray scale & Resize
+        inputs = [sample["image"].convert("L").resize((self.resolution, self.resolution)) for sample in samples]
+        # Convert PIL image to torch.tensor
+        inputs = [pil_to_tensor(sample).to(torch.float32) for sample in inputs]
+        # Reshape properly before feeding the tensor into the model
+        # TIP: We use `torch.stack` to create the batch dimension!
+        inputs = torch.stack([sample.flatten() for sample in inputs])
+
+        # Convert labels (int) to torch.tensor
+        labels = torch.tensor([torch.tensor(sample["label"]) for sample in samples])
+
+        return inputs, labels
+
+
+@dataclass
+class RGBCollator:
+    resolution: int
+
+    def __call__(self, samples):
+        # Resize
+        inputs = [sample["image"].resize((self.resolution, self.resolution)) for sample in samples]
+        # Convert PIL image to torch.tensor
+        inputs = [pil_to_tensor(sample).to(torch.float32) for sample in inputs]
+        # Reshape properly before feeding the tensor into the model
+        # TIP: We use `torch.stack` to create the batch dimension!
+        inputs = torch.stack([sample for sample in inputs])
+
+        # Convert labels (int) to torch.tensor
+        labels = torch.tensor([torch.tensor(sample["label"]) for sample in samples])
+
+        return inputs, labels

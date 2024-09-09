@@ -1,13 +1,15 @@
-from dataclasses import dataclass
 from typing import List
 
-import torch
 import torch.nn as nn
-from torchvision.transforms.functional import pil_to_tensor
 
 
 class MyCustomModel(nn.Module):
-    def __init__(self, n_classes: int = 200, resolution: int = 64, intermidiate_dimensions: List[int] = [128, 256]):
+    def __init__(
+        self,
+        n_classes: int = 200,
+        resolution: int = 64,
+        intermidiate_dimensions: List[int] = [8192, 4096, 2048, 1024, 512, 256, 128, 64],
+    ):
         super().__init__()
         self.n_classes = n_classes
         self.resolution = resolution
@@ -27,41 +29,3 @@ class MyCustomModel(nn.Module):
         for layer in self.model:
             x = layer(x)
         return x
-
-
-@dataclass
-class MyCustomCollator:
-    resolution: int = 64
-
-    def __call__(self, samples):
-        # Convert RGB --> Gray scale & Resize
-        inputs = [sample["image"].convert("L").resize((self.resolution, self.resolution)) for sample in samples]
-        # Convert PIL image to torch.tensor
-        inputs = [pil_to_tensor(sample).to(torch.float32) for sample in inputs]
-        # Reshape properly before feeding the tensor into the model
-        # TIP: We use `torch.stack` to create the batch dimension!
-        inputs = torch.stack([sample.flatten() for sample in inputs])
-
-        # Convert labels (int) to torch.tensor
-        labels = torch.tensor([torch.tensor(sample["label"]) for sample in samples])
-
-        return inputs, labels
-
-
-@dataclass
-class RGBCollator:
-    resolution: int
-
-    def __call__(self, samples):
-        # Resize
-        inputs = [sample["image"].resize((self.resolution, self.resolution)) for sample in samples]
-        # Convert PIL image to torch.tensor
-        inputs = [pil_to_tensor(sample).to(torch.float32) for sample in inputs]
-        # Reshape properly before feeding the tensor into the model
-        # TIP: We use `torch.stack` to create the batch dimension!
-        inputs = torch.stack([sample for sample in inputs])
-
-        # Convert labels (int) to torch.tensor
-        labels = torch.tensor([torch.tensor(sample["label"]) for sample in samples])
-
-        return inputs, labels
