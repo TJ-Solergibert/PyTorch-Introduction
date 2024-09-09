@@ -1,0 +1,20 @@
+START TIME: Sat Sep  7 09:22:19 PM CEST 2024
+[vit] BS: 128, NW: 16
+Current hostname: as04r4b19
+[default0]:[09/07/2024 07:22:34 PM] INFO - VisionTransformer has 631021000 parameters
+[default0]:[09/07/2024 07:22:36 PM] INFO - [EPOCH: 1] Starting training loop...
+[default0]:[09/07/2024 07:24:57 PM] INFO - [EPOCH: 1] Training throughput: 711.068 imgs/s
+[default0]:[09/07/2024 07:24:57 PM] INFO - [EPOCH: 2] Starting training loop...
+[default0]:[09/07/2024 07:27:17 PM] INFO - [EPOCH: 2] Training throughput: 713.059 imgs/s
+[default0]:[09/07/2024 07:27:17 PM] INFO - [EPOCH: 3] Starting training loop...
+[default0]:[09/07/2024 07:29:37 PM] INFO - [EPOCH: 3] Training throughput: 713.435 imgs/s
+[default0]:[09/07/2024 07:29:37 PM] INFO - [EPOCH: 4] Starting training loop...
+[default0]:[09/07/2024 07:31:57 PM] INFO - [EPOCH: 4] Training throughput: 714.815 imgs/s
+[default0]:[09/07/2024 07:31:57 PM] INFO - [EPOCH: 5] Starting training loop...
+[default0]:[09/07/2024 07:34:16 PM] INFO - [EPOCH: 5] Training throughput: 715.352 imgs/s
+[default0]:[09/07/2024 07:34:16 PM] INFO - [EPOCH: 5] Starting validation loop...
+[default0]:[09/07/2024 07:34:19 PM] INFO - [EPOCH: 5] Accuracy: 0.128 | Validation throughput: 1636.002 imgs/s
+[default0]:[09/07/2024 07:34:19 PM] INFO - Training finished!
+[default0]:[09/07/2024 07:34:19 PM] INFO - Complete training Time: 702.432680606842 | Training throughput: 713.543 imgs/s | Validation throughput: 1636.002 imgs/s
+[default0]:[09/07/2024 07:34:19 PM] INFO - GPU memory (GB) | allocated: 11.955 | max allocated: 56.826 | reserved: 57.779 | max reserved: 57.779
+END TIME: Sat Sep  7 09:34:21 PM CEST 2024

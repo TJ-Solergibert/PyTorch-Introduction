@@ -1,0 +1,349 @@
++ module purge
++ local __lmod_my_status
++ local __lmod_sh_dbg
++ '[' -z '' ']'
++ case "$-" in
++ __lmod_sh_dbg=x
++ '[' -n x ']'
++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+unload bsc/1.0 (PATH, MANPATH)
+Shell debugging restarted
++ return 0
++ module load singularity
++ local __lmod_my_status
++ local __lmod_sh_dbg
++ '[' -z '' ']'
++ case "$-" in
++ __lmod_sh_dbg=x
++ '[' -n x ']'
++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+load SINGULARITY/4.1.5 (PATH)
+Shell debugging restarted
++ return 0
++ GPUS_PER_NODE=4
+++ scontrol show hostnames 'as01r1b[17-32]'
+++ head -n 1
++ MASTER_ADDR=as01r1b17
++ MASTER_PORT=6000
++ LAUNCHER='torchrun     --nproc_per_node 4     --nnodes 16     --node_rank $SLURM_PROCID     --rdzv_endpoint as01r1b17:6000     --rdzv_backend c10d     --max_restarts 0     --tee 3     '
++ MODEL=vit
++ DS=/home/upc/upc580327/lab1/tiny-224
++ BS=128
++ NW=16
++ echo '[vit] BS: 128, NW: 16'
++ PYTHON_FILE=/home/upc/upc580327/lab1/train_ddp.py
++ PYTHON_ARGS='--model_name vit     --dataset /home/upc/upc580327/lab1/tiny-224     --batch_size 128     --eval_batch_size 128     --num_workers 16     --mixed_precision bf16     --optimizer adamw     '
++ export 'CMD=torchrun     --nproc_per_node 4     --nnodes 16     --node_rank $SLURM_PROCID     --rdzv_endpoint as01r1b17:6000     --rdzv_backend c10d     --max_restarts 0     --tee 3      /home/upc/upc580327/lab1/train_ddp.py --model_name vit     --dataset /home/upc/upc580327/lab1/tiny-224     --batch_size 128     --eval_batch_size 128     --num_workers 16     --mixed_precision bf16     --optimizer adamw     '
++ CMD='torchrun     --nproc_per_node 4     --nnodes 16     --node_rank $SLURM_PROCID     --rdzv_endpoint as01r1b17:6000     --rdzv_backend c10d     --max_restarts 0     --tee 3      /home/upc/upc580327/lab1/train_ddp.py --model_name vit     --dataset /home/upc/upc580327/lab1/tiny-224     --batch_size 128     --eval_batch_size 128     --num_workers 16     --mixed_precision bf16     --optimizer adamw     '
++ SINGULARITY_CONTAINER=/apps/ACC/SINGULARITY/SRC/images/nvidiaPytorch24.07.sif
++ SINGULARITY_ARGS='     --bind /home/upc/upc580327/lab1     --nv     /apps/ACC/SINGULARITY/SRC/images/nvidiaPytorch24.07.sif     '
++ SRUN_ARGS='     --cpus-per-task 80     --jobid 5280222     '
++ srun --cpus-per-task 80 --jobid 5280222 bsc_singularity exec --bind /home/upc/upc580327/lab1 --nv /apps/ACC/SINGULARITY/SRC/images/nvidiaPytorch24.07.sif bash -c 'torchrun     --nproc_per_node 4     --nnodes 16     --node_rank $SLURM_PROCID     --rdzv_endpoint as01r1b17:6000     --rdzv_backend c10d     --max_restarts 0     --tee 3      /home/upc/upc580327/lab1/train_ddp.py --model_name vit     --dataset /home/upc/upc580327/lab1/tiny-224     --batch_size 128     --eval_batch_size 128     --num_workers 16     --mixed_precision bf16     --optimizer adamw     '
+/usr/bin/rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+/usr/bin/rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+/usr/bin/rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+/usr/bin/rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+/usr/bin/rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+/usr/bin/rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+/usr/bin/rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+/usr/bin/rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+/usr/bin/rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+/usr/bin/rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+/usr/bin/rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+/usr/bin/rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+/usr/bin/rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+/usr/bin/rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+/usr/bin/rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+/usr/bin/rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+[default0]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default0]:  avg = a.mean(axis, **keepdims_kw)
+[default0]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default0]:  ret = ret.dtype.type(ret / rcount)
+[default0]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default0]:  avg = a.mean(axis, **keepdims_kw)
+[default0]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default0]:  ret = ret.dtype.type(ret / rcount)
+[default1]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default1]:  avg = a.mean(axis, **keepdims_kw)
+[default1]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default1]:  ret = ret.dtype.type(ret / rcount)
+[default1]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default1]:  avg = a.mean(axis, **keepdims_kw)
+[default1]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default1]:  ret = ret.dtype.type(ret / rcount)
+[default0]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default0]:  avg = a.mean(axis, **keepdims_kw)
+[default0]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default0]:  ret = ret.dtype.type(ret / rcount)
+[default2]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default2]:  avg = a.mean(axis, **keepdims_kw)
+[default2]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default2]:  ret = ret.dtype.type(ret / rcount)
+[default1]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default1]:  avg = a.mean(axis, **keepdims_kw)
+[default1]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default1]:  ret = ret.dtype.type(ret / rcount)
+[default3]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default3]:  avg = a.mean(axis, **keepdims_kw)
+[default3]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default3]:  ret = ret.dtype.type(ret / rcount)
+[default3]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default3]:  avg = a.mean(axis, **keepdims_kw)
+[default3]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default3]:  ret = ret.dtype.type(ret / rcount)
+[default0]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default0]:  avg = a.mean(axis, **keepdims_kw)
+[default0]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default0]:  ret = ret.dtype.type(ret / rcount)
+[default3]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default3]:  avg = a.mean(axis, **keepdims_kw)
+[default3]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default3]:  ret = ret.dtype.type(ret / rcount)
+[default1]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default1]:  avg = a.mean(axis, **keepdims_kw)
+[default1]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default1]:  ret = ret.dtype.type(ret / rcount)
+[default0]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default0]:  avg = a.mean(axis, **keepdims_kw)
+[default0]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default0]:  ret = ret.dtype.type(ret / rcount)
+[default3]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default3]:  avg = a.mean(axis, **keepdims_kw)
+[default3]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default3]:  ret = ret.dtype.type(ret / rcount)
+[default2]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default2]:  avg = a.mean(axis, **keepdims_kw)
+[default2]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default2]:  ret = ret.dtype.type(ret / rcount)
+[default2]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default2]:  avg = a.mean(axis, **keepdims_kw)
+[default2]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default1]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default1]:  avg = a.mean(axis, **keepdims_kw)
+[default1]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default1]:  ret = ret.dtype.type(ret / rcount)
+[default2]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default2]:  avg = a.mean(axis, **keepdims_kw)
+[default2]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default2]:  ret = ret.dtype.type(ret / rcount)
+[default2]:  ret = ret.dtype.type(ret / rcount)
+[default3]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default3]:  avg = a.mean(axis, **keepdims_kw)
+[default3]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default3]:  ret = ret.dtype.type(ret / rcount)
+[default2]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default2]:  avg = a.mean(axis, **keepdims_kw)
+[default2]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default2]:  ret = ret.dtype.type(ret / rcount)
+[default1]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default2]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default1]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default2]:  avg = a.mean(axis, **keepdims_kw)
+[default2]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default1]:  avg = a.mean(axis, **keepdims_kw)
+[default1]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default2]:  ret = ret.dtype.type(ret / rcount)
+[default1]:  ret = ret.dtype.type(ret / rcount)
+[default1]:  avg = a.mean(axis, **keepdims_kw)
+[default1]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default1]:  ret = ret.dtype.type(ret / rcount)
+[default1]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default1]:  avg = a.mean(axis, **keepdims_kw)
+[default1]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default1]:  ret = ret.dtype.type(ret / rcount)
+[default2]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default2]:  avg = a.mean(axis, **keepdims_kw)
+[default2]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default2]:  ret = ret.dtype.type(ret / rcount)
+[default2]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default2]:  avg = a.mean(axis, **keepdims_kw)
+[default2]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default2]:  ret = ret.dtype.type(ret / rcount)
+[default0]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default0]:  avg = a.mean(axis, **keepdims_kw)
+[default0]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default0]:  ret = ret.dtype.type(ret / rcount)
+[default1]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default1]:  avg = a.mean(axis, **keepdims_kw)
+[default1]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default1]:  ret = ret.dtype.type(ret / rcount)
+[default0]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default0]:  avg = a.mean(axis, **keepdims_kw)
+[default0]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default0]:  ret = ret.dtype.type(ret / rcount)
+[default2]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default2]:  avg = a.mean(axis, **keepdims_kw)
+[default2]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default2]:  ret = ret.dtype.type(ret / rcount)
+[default1]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default1]:  avg = a.mean(axis, **keepdims_kw)
+[default1]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default1]:  ret = ret.dtype.type(ret / rcount)
+[default3]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default3]:  avg = a.mean(axis, **keepdims_kw)
+[default3]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default3]:  ret = ret.dtype.type(ret / rcount)
+[default3]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default3]:  avg = a.mean(axis, **keepdims_kw)
+[default3]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default3]:  ret = ret.dtype.type(ret / rcount)
+[default2]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default2]:  avg = a.mean(axis, **keepdims_kw)
+[default2]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default2]:  ret = ret.dtype.type(ret / rcount)
+[default3]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default3]:  avg = a.mean(axis, **keepdims_kw)
+[default0]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default0]:  avg = a.mean(axis, **keepdims_kw)
+[default0]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default0]:  ret = ret.dtype.type(ret / rcount)
+[default0]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default0]:  avg = a.mean(axis, **keepdims_kw)
+[default0]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default0]:  ret = ret.dtype.type(ret / rcount)
+[default3]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default3]:  avg = a.mean(axis, **keepdims_kw)
+[default3]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default3]:  ret = ret.dtype.type(ret / rcount)
+[default3]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default3]:  avg = a.mean(axis, **keepdims_kw)
+[default3]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default3]:  ret = ret.dtype.type(ret / rcount)
+[default1]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default1]:  avg = a.mean(axis, **keepdims_kw)
+[default1]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default1]:  ret = ret.dtype.type(ret / rcount)
+[default3]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default3]:  avg = a.mean(axis, **keepdims_kw)
+[default3]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default3]:  ret = ret.dtype.type(ret / rcount)
+[default2]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default2]:  avg = a.mean(axis, **keepdims_kw)
+[default2]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default2]:  ret = ret.dtype.type(ret / rcount)
+[default0]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default0]:  avg = a.mean(axis, **keepdims_kw)
+[default0]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default0]:  ret = ret.dtype.type(ret / rcount)
+[default2]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default2]:  avg = a.mean(axis, **keepdims_kw)
+[default2]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default2]:  ret = ret.dtype.type(ret / rcount)
+[default3]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default3]:  avg = a.mean(axis, **keepdims_kw)
+[default3]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default3]:  ret = ret.dtype.type(ret / rcount)
+[default2]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default2]:  avg = a.mean(axis, **keepdims_kw)
+[default2]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default2]:  ret = ret.dtype.type(ret / rcount)
+[default1]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default1]:  avg = a.mean(axis, **keepdims_kw)
+[default1]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default1]:  ret = ret.dtype.type(ret / rcount)
+[default0]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default0]:  avg = a.mean(axis, **keepdims_kw)
+[default0]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default0]:  ret = ret.dtype.type(ret / rcount)
+[default3]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default3]:  avg = a.mean(axis, **keepdims_kw)
+[default3]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default3]:  ret = ret.dtype.type(ret / rcount)
+[default0]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default0]:  avg = a.mean(axis, **keepdims_kw)
+[default0]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default0]:  ret = ret.dtype.type(ret / rcount)
+[default0]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default0]:  avg = a.mean(axis, **keepdims_kw)
+[default0]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default0]:  ret = ret.dtype.type(ret / rcount)
+[default3]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default3]:  avg = a.mean(axis, **keepdims_kw)
+[default3]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default3]:  ret = ret.dtype.type(ret / rcount)
+[default1]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default1]:  avg = a.mean(axis, **keepdims_kw)
+[default1]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default1]:  ret = ret.dtype.type(ret / rcount)
+[default2]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default2]:  avg = a.mean(axis, **keepdims_kw)
+[default2]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default2]:  ret = ret.dtype.type(ret / rcount)
+[default0]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default0]:  avg = a.mean(axis, **keepdims_kw)
+[default0]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default0]:  ret = ret.dtype.type(ret / rcount)
+[default1]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default1]:  avg = a.mean(axis, **keepdims_kw)
+[default1]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default1]:  ret = ret.dtype.type(ret / rcount)
+[default2]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default2]:  avg = a.mean(axis, **keepdims_kw)
+[default2]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default2]:  ret = ret.dtype.type(ret / rcount)
+[default0]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default0]:  avg = a.mean(axis, **keepdims_kw)
+[default0]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default0]:  ret = ret.dtype.type(ret / rcount)
+[default3]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default3]:  avg = a.mean(axis, **keepdims_kw)
+[default3]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default3]:  ret = ret.dtype.type(ret / rcount)
+[default1]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default1]:  avg = a.mean(axis, **keepdims_kw)
+[default1]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default1]:  ret = ret.dtype.type(ret / rcount)
+[default3]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default3]:  avg = a.mean(axis, **keepdims_kw)
+[default3]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default3]:  ret = ret.dtype.type(ret / rcount)
+[default1]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default1]:  avg = a.mean(axis, **keepdims_kw)
+[default1]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default1]:  ret = ret.dtype.type(ret / rcount)
+[default2]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default2]:  avg = a.mean(axis, **keepdims_kw)
+[default2]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default2]:  ret = ret.dtype.type(ret / rcount)
+[default3]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default3]:  ret = ret.dtype.type(ret / rcount)
+[default0]:/usr/local/lib/python3.10/dist-packages/numpy/lib/function_base.py:518: RuntimeWarning: Mean of empty slice.
+[default0]:  avg = a.mean(axis, **keepdims_kw)
+[default0]:/usr/local/lib/python3.10/dist-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+[default0]:  ret = ret.dtype.type(ret / rcount)
+++ date
++ echo 'END TIME: Sat Sep  7 09:23:51 PM CEST 2024'

@@ -1,0 +1,25 @@
+START TIME: Sat Sep  7 09:22:17 PM CEST 2024
+[vit] BS: 128, NW: 16
+Current hostname: as01r3b29
+[default0]:[09/07/2024 07:22:31 PM] INFO - VisionTransformer has 631021000 parameters
+[default0]:[09/07/2024 07:22:32 PM] INFO - [EPOCH: 1] Starting training loop...
+[default0]:[09/07/2024 07:28:20 PM] INFO - [EPOCH: 1] Loss at iteration 500: 4.987
+[default0]:[09/07/2024 07:31:35 PM] INFO - [EPOCH: 1] Training throughput: 184.201 imgs/s
+[default0]:[09/07/2024 07:31:35 PM] INFO - [EPOCH: 2] Starting training loop...
+[default0]:[09/07/2024 07:37:20 PM] INFO - [EPOCH: 2] Loss at iteration 500: 7.421
+[default0]:[09/07/2024 07:40:34 PM] INFO - [EPOCH: 2] Training throughput: 185.511 imgs/s
+[default0]:[09/07/2024 07:40:34 PM] INFO - [EPOCH: 3] Starting training loop...
+[default0]:[09/07/2024 07:46:19 PM] INFO - [EPOCH: 3] Loss at iteration 500: 7.320
+[default0]:[09/07/2024 07:49:33 PM] INFO - [EPOCH: 3] Training throughput: 185.333 imgs/s
+[default0]:[09/07/2024 07:49:33 PM] INFO - [EPOCH: 4] Starting training loop...
+[default0]:[09/07/2024 07:55:19 PM] INFO - [EPOCH: 4] Loss at iteration 500: 7.484
+[default0]:[09/07/2024 07:58:33 PM] INFO - [EPOCH: 4] Training throughput: 185.334 imgs/s
+[default0]:[09/07/2024 07:58:33 PM] INFO - [EPOCH: 5] Starting training loop...
+[default0]:[09/07/2024 08:04:18 PM] INFO - [EPOCH: 5] Loss at iteration 500: 7.747
+[default0]:[09/07/2024 08:07:32 PM] INFO - [EPOCH: 5] Training throughput: 185.477 imgs/s
+[default0]:[09/07/2024 08:07:32 PM] INFO - [EPOCH: 5] Starting validation loop...
+[default0]:[09/07/2024 08:07:40 PM] INFO - [EPOCH: 5] Accuracy: 0.029 | Validation throughput: 562.344 imgs/s
+[default0]:[09/07/2024 08:07:40 PM] INFO - Training finished!
+[default0]:[09/07/2024 08:07:40 PM] INFO - Complete training Time: 2708.2428719997406 | Training throughput: 185.170 imgs/s | Validation throughput: 562.344 imgs/s
+[default0]:[09/07/2024 08:07:40 PM] INFO - GPU memory (GB) | allocated: 11.957 | max allocated: 56.828 | reserved: 57.537 | max reserved: 57.537
+END TIME: Sat Sep  7 10:07:42 PM CEST 2024

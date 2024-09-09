@@ -1,0 +1,45 @@
+START TIME: Mon Sep  9 09:45:36 AM CEST 2024
+Current hostname: as02r1b15
+[default0]:[09/09/2024 07:45:53 AM] INFO - ############# Config #############
+[default0]:[09/09/2024 07:45:53 AM] INFO - ### mixed_precision: bf16
+[default0]:[09/09/2024 07:45:53 AM] INFO - ### batch_size: 128
+[default0]:[09/09/2024 07:45:53 AM] INFO - ### eval_batch_size: 128
+[default0]:[09/09/2024 07:45:53 AM] INFO - ### num_workers: 10
+[default0]:[09/09/2024 07:45:53 AM] INFO - ### num_epochs: 5
+[default0]:[09/09/2024 07:45:53 AM] INFO - ### epochs_eval: 5
+[default0]:[09/09/2024 07:45:53 AM] INFO - ### iteration_logging: 500
+[default0]:[09/09/2024 07:45:53 AM] INFO - ### model_name: vit
+[default0]:[09/09/2024 07:45:53 AM] INFO - ### intermidiate_dimensions: None
+[default0]:[09/09/2024 07:45:53 AM] INFO - ### pretrained: False
+[default0]:[09/09/2024 07:45:53 AM] INFO - ### compile: True
+[default0]:[09/09/2024 07:45:53 AM] INFO - ### optimizer: adamw
+[default0]:[09/09/2024 07:45:53 AM] INFO - ### learning_rate: 0.0005
+[default0]:[09/09/2024 07:45:53 AM] INFO - ### dataset: /home/upc/upc580327/lab1/tiny-224
+[default0]:[09/09/2024 07:45:53 AM] INFO - ### resolution: 224
+[default0]:[09/09/2024 07:45:53 AM] INFO - ### Device: cuda
+[default0]:[09/09/2024 07:45:53 AM] INFO - ### AMP Enabled: True
+[default0]:[09/09/2024 07:45:53 AM] INFO - ### Total number of parameters 631021000
+[default0]:[09/09/2024 07:45:53 AM] INFO - ### Total training samples (batches): 99968 (781)
+[default0]:[09/09/2024 07:45:53 AM] INFO - ### Total validation samples (batches): 4992 (39)
+[default0]:[09/09/2024 07:45:53 AM] INFO - ##################################
+[default0]:[09/09/2024 07:45:53 AM] INFO - [EPOCH: 1] Starting training loop...
+[default0]:[09/09/2024 07:53:39 AM] INFO - [EPOCH: 1] Loss at iteration 500: 4.985
+[default0]:[09/09/2024 07:56:18 AM] INFO - [EPOCH: 1] Training throughput: 160.090 imgs/s
+[default0]:[09/09/2024 07:56:18 AM] INFO - [EPOCH: 2] Starting training loop...
+[default0]:[09/09/2024 08:00:57 AM] INFO - [EPOCH: 2] Loss at iteration 500: 4.844
+[default0]:[09/09/2024 08:03:33 AM] INFO - [EPOCH: 2] Training throughput: 229.410 imgs/s
+[default0]:[09/09/2024 08:03:33 AM] INFO - [EPOCH: 3] Starting training loop...
+[default0]:[09/09/2024 08:08:12 AM] INFO - [EPOCH: 3] Loss at iteration 500: 4.805
+[default0]:[09/09/2024 08:10:49 AM] INFO - [EPOCH: 3] Training throughput: 229.518 imgs/s
+[default0]:[09/09/2024 08:10:49 AM] INFO - [EPOCH: 4] Starting training loop...
+[default0]:[09/09/2024 08:15:28 AM] INFO - [EPOCH: 4] Loss at iteration 500: 4.773
+[default0]:[09/09/2024 08:18:04 AM] INFO - [EPOCH: 4] Training throughput: 229.629 imgs/s
+[default0]:[09/09/2024 08:18:04 AM] INFO - [EPOCH: 5] Starting training loop...
+[default0]:[09/09/2024 08:22:44 AM] INFO - [EPOCH: 5] Loss at iteration 500: 4.686
+[default0]:[09/09/2024 08:25:21 AM] INFO - [EPOCH: 5] Training throughput: 228.920 imgs/s
+[default0]:[09/09/2024 08:25:21 AM] INFO - [EPOCH: 5] Starting validation loop...
+[default0]:[09/09/2024 08:27:09 AM] INFO - [EPOCH: 5] Accuracy: 0.060 | Validation throughput: 46.354 imgs/s
+[default0]:[09/09/2024 08:27:09 AM] INFO - Training finished!
+[default0]:[09/09/2024 08:27:09 AM] INFO - Complete training Time: 2475.51 | Training throughput: 229.369 imgs/s | Validation throughput: 46.354 imgs/s
+[default0]:[09/09/2024 08:27:09 AM] INFO - GPU memory (GB) | allocated: 9.721 | max allocated: 56.821 | reserved: 59.330 | max reserved: 60.174
+END TIME: Mon Sep  9 10:27:13 AM CEST 2024

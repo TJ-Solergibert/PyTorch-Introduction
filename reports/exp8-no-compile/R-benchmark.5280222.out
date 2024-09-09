@@ -1,0 +1,35 @@
+START TIME: Sat Sep  7 09:22:39 PM CEST 2024
+[vit] BS: 128, NW: 16
+Current hostname: as01r1b19
+Current hostname: as01r1b17
+Current hostname: as01r1b18
+Current hostname: as01r1b24
+Current hostname: as01r1b25
+Current hostname: as01r1b32
+Current hostname: as01r1b26
+Current hostname: as01r1b23
+Current hostname: as01r1b28
+Current hostname: as01r1b21
+Current hostname: as01r1b22
+Current hostname: as01r1b29
+Current hostname: as01r1b31
+Current hostname: as01r1b27
+Current hostname: as01r1b30
+Current hostname: as01r1b20
+[default0]:[09/07/2024 07:22:55 PM] INFO - VisionTransformer has 631021000 parameters
+[default0]:[09/07/2024 07:22:57 PM] INFO - [EPOCH: 1] Starting training loop...
+[default0]:[09/07/2024 07:23:09 PM] INFO - [EPOCH: 1] Training throughput: 8465.784 imgs/s
+[default0]:[09/07/2024 07:23:09 PM] INFO - [EPOCH: 2] Starting training loop...
+[default0]:[09/07/2024 07:23:19 PM] INFO - [EPOCH: 2] Training throughput: 9782.937 imgs/s
+[default0]:[09/07/2024 07:23:19 PM] INFO - [EPOCH: 3] Starting training loop...
+[default0]:[09/07/2024 07:23:29 PM] INFO - [EPOCH: 3] Training throughput: 9827.324 imgs/s
+[default0]:[09/07/2024 07:23:29 PM] INFO - [EPOCH: 4] Starting training loop...
+[default0]:[09/07/2024 07:23:39 PM] INFO - [EPOCH: 4] Training throughput: 9824.340 imgs/s
+[default0]:[09/07/2024 07:23:39 PM] INFO - [EPOCH: 5] Starting training loop...
+[default0]:[09/07/2024 07:23:49 PM] INFO - [EPOCH: 5] Training throughput: 9770.237 imgs/s
+[default0]:[09/07/2024 07:23:49 PM] INFO - [EPOCH: 5] Starting validation loop...
+[default0]:[09/07/2024 07:23:50 PM] INFO - [EPOCH: 5] Accuracy: nan | Validation throughput: 0.000 imgs/s
+[default0]:[09/07/2024 07:23:50 PM] INFO - Training finished!
+[default0]:[09/07/2024 07:23:50 PM] INFO - Complete training Time: 52.23923134803772 | Training throughput: 9501.402 imgs/s | Validation throughput: 0.000 imgs/s
+[default0]:[09/07/2024 07:23:50 PM] INFO - GPU memory (GB) | allocated: 11.956 | max allocated: 56.827 | reserved: 57.789 | max reserved: 57.789
+END TIME: Sat Sep  7 09:23:51 PM CEST 2024

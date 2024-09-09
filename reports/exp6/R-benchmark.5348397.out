@@ -1,0 +1,85 @@
+START TIME: Sun Sep  8 06:57:06 PM CEST 2024
+Current hostname: as04r4b14
+[09/08/2024 04:57:16 PM] INFO - ############# Config #############
+[09/08/2024 04:57:16 PM] INFO - ### mixed_precision: bf16
+[09/08/2024 04:57:16 PM] INFO - ### batch_size: 128
+[09/08/2024 04:57:16 PM] INFO - ### eval_batch_size: 128
+[09/08/2024 04:57:16 PM] INFO - ### num_workers: 10
+[09/08/2024 04:57:16 PM] INFO - ### num_epochs: 3
+[09/08/2024 04:57:16 PM] INFO - ### epochs_eval: 1
+[09/08/2024 04:57:16 PM] INFO - ### iteration_logging: 50
+[09/08/2024 04:57:16 PM] INFO - ### model_name: vit
+[09/08/2024 04:57:16 PM] INFO - ### intermidiate_dimensions: None
+[09/08/2024 04:57:16 PM] INFO - ### pretrained: False
+[09/08/2024 04:57:16 PM] INFO - ### compile: False
+[09/08/2024 04:57:16 PM] INFO - ### optimizer: adam
+[09/08/2024 04:57:16 PM] INFO - ### learning_rate: 0.0005
+[09/08/2024 04:57:16 PM] INFO - ### dataset: /home/upc/upc580327/lab1/tiny-224
+[09/08/2024 04:57:16 PM] INFO - ### resolution: 224
+[09/08/2024 04:57:16 PM] INFO - ### Device: cuda
+[09/08/2024 04:57:16 PM] INFO - ### AMP Enabled: True
+[09/08/2024 04:57:16 PM] INFO - ### Total number of parameters 631021000
+[09/08/2024 04:57:16 PM] INFO - ### Total training samples (batches): 99968 (781)
+[09/08/2024 04:57:16 PM] INFO - ### Total validation samples (batches): 4992 (39)
+[09/08/2024 04:57:16 PM] INFO - ##################################
+[09/08/2024 04:57:16 PM] INFO - [EPOCH: 1] Starting training loop...
+[09/08/2024 04:57:50 PM] INFO - [EPOCH: 1] Loss at iteration 50: 5.371
+[09/08/2024 04:58:24 PM] INFO - [EPOCH: 1] Loss at iteration 100: 5.231
+[09/08/2024 04:58:58 PM] INFO - [EPOCH: 1] Loss at iteration 150: 5.194
+[09/08/2024 04:59:32 PM] INFO - [EPOCH: 1] Loss at iteration 200: 5.097
+[09/08/2024 05:00:06 PM] INFO - [EPOCH: 1] Loss at iteration 250: 5.054
+[09/08/2024 05:00:40 PM] INFO - [EPOCH: 1] Loss at iteration 300: 4.966
+[09/08/2024 05:01:14 PM] INFO - [EPOCH: 1] Loss at iteration 350: 4.918
+[09/08/2024 05:01:48 PM] INFO - [EPOCH: 1] Loss at iteration 400: 4.869
+[09/08/2024 05:02:22 PM] INFO - [EPOCH: 1] Loss at iteration 450: 4.834
+[09/08/2024 05:02:55 PM] INFO - [EPOCH: 1] Loss at iteration 500: 4.807
+[09/08/2024 05:03:29 PM] INFO - [EPOCH: 1] Loss at iteration 550: 4.782
+[09/08/2024 05:04:03 PM] INFO - [EPOCH: 1] Loss at iteration 600: 4.758
+[09/08/2024 05:04:37 PM] INFO - [EPOCH: 1] Loss at iteration 650: 4.773
+[09/08/2024 05:05:11 PM] INFO - [EPOCH: 1] Loss at iteration 700: 4.762
+[09/08/2024 05:05:45 PM] INFO - [EPOCH: 1] Loss at iteration 750: 4.738
+[09/08/2024 05:06:06 PM] INFO - [EPOCH: 1] Training throughput: 188.496 imgs/s
+[09/08/2024 05:06:06 PM] INFO - [EPOCH: 1] Starting validation loop...
+[09/08/2024 05:06:15 PM] INFO - [EPOCH: 1] Accuracy: 0.047 | Validation throughput: 555.755 imgs/s
+[09/08/2024 05:06:15 PM] INFO - [EPOCH: 2] Starting training loop...
+[09/08/2024 05:06:49 PM] INFO - [EPOCH: 2] Loss at iteration 50: 7.714
+[09/08/2024 05:07:23 PM] INFO - [EPOCH: 2] Loss at iteration 100: 4.768
+[09/08/2024 05:07:57 PM] INFO - [EPOCH: 2] Loss at iteration 150: 4.801
+[09/08/2024 05:08:31 PM] INFO - [EPOCH: 2] Loss at iteration 200: 4.859
+[09/08/2024 05:09:05 PM] INFO - [EPOCH: 2] Loss at iteration 250: 4.716
+[09/08/2024 05:09:38 PM] INFO - [EPOCH: 2] Loss at iteration 300: 4.729
+[09/08/2024 05:10:12 PM] INFO - [EPOCH: 2] Loss at iteration 350: 4.665
+[09/08/2024 05:10:46 PM] INFO - [EPOCH: 2] Loss at iteration 400: 4.745
+[09/08/2024 05:11:20 PM] INFO - [EPOCH: 2] Loss at iteration 450: 4.740
+[09/08/2024 05:11:54 PM] INFO - [EPOCH: 2] Loss at iteration 500: 4.682
+[09/08/2024 05:12:28 PM] INFO - [EPOCH: 2] Loss at iteration 550: 4.673
+[09/08/2024 05:13:02 PM] INFO - [EPOCH: 2] Loss at iteration 600: 4.644
+[09/08/2024 05:13:35 PM] INFO - [EPOCH: 2] Loss at iteration 650: 4.889
+[09/08/2024 05:14:09 PM] INFO - [EPOCH: 2] Loss at iteration 700: 4.770
+[09/08/2024 05:14:43 PM] INFO - [EPOCH: 2] Loss at iteration 750: 4.720
+[09/08/2024 05:15:04 PM] INFO - [EPOCH: 2] Training throughput: 188.898 imgs/s
+[09/08/2024 05:15:04 PM] INFO - [EPOCH: 2] Starting validation loop...
+[09/08/2024 05:15:13 PM] INFO - [EPOCH: 2] Accuracy: 0.048 | Validation throughput: 563.118 imgs/s
+[09/08/2024 05:15:13 PM] INFO - [EPOCH: 3] Starting training loop...
+[09/08/2024 05:15:47 PM] INFO - [EPOCH: 3] Loss at iteration 50: 7.582
+[09/08/2024 05:16:21 PM] INFO - [EPOCH: 3] Loss at iteration 100: 4.672
+[09/08/2024 05:16:55 PM] INFO - [EPOCH: 3] Loss at iteration 150: 4.765
+[09/08/2024 05:17:29 PM] INFO - [EPOCH: 3] Loss at iteration 200: 4.704
+[09/08/2024 05:18:02 PM] INFO - [EPOCH: 3] Loss at iteration 250: 4.780
+[09/08/2024 05:18:36 PM] INFO - [EPOCH: 3] Loss at iteration 300: 4.874
+[09/08/2024 05:19:10 PM] INFO - [EPOCH: 3] Loss at iteration 350: 4.743
+[09/08/2024 05:19:44 PM] INFO - [EPOCH: 3] Loss at iteration 400: 4.710
+[09/08/2024 05:20:18 PM] INFO - [EPOCH: 3] Loss at iteration 450: 4.688
+[09/08/2024 05:20:51 PM] INFO - [EPOCH: 3] Loss at iteration 500: 4.765
+[09/08/2024 05:21:25 PM] INFO - [EPOCH: 3] Loss at iteration 550: 4.847
+[09/08/2024 05:21:59 PM] INFO - [EPOCH: 3] Loss at iteration 600: 4.721
+[09/08/2024 05:22:33 PM] INFO - [EPOCH: 3] Loss at iteration 650: 4.810
+[09/08/2024 05:23:07 PM] INFO - [EPOCH: 3] Loss at iteration 700: 4.758
+[09/08/2024 05:23:40 PM] INFO - [EPOCH: 3] Loss at iteration 750: 4.743
+[09/08/2024 05:24:01 PM] INFO - [EPOCH: 3] Training throughput: 189.195 imgs/s
+[09/08/2024 05:24:01 PM] INFO - [EPOCH: 3] Starting validation loop...
+[09/08/2024 05:24:10 PM] INFO - [EPOCH: 3] Accuracy: 0.043 | Validation throughput: 564.666 imgs/s
+[09/08/2024 05:24:10 PM] INFO - Training finished!
+[09/08/2024 05:24:10 PM] INFO - Complete training Time: 1614.64 | Training throughput: 189.047 imgs/s | Validation throughput: 561.153 imgs/s
+[09/08/2024 05:24:10 PM] INFO - GPU memory (GB) | allocated: 9.607 | max allocated: 54.481 | reserved: 55.023 | max reserved: 55.023
+END TIME: Sun Sep  8 07:24:11 PM CEST 2024

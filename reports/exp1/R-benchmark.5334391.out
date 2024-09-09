@@ -1,0 +1,40 @@
+START TIME: Sun Sep  8 05:40:47 PM CEST 2024
+Current hostname: as01r2b20
+[09/08/2024 03:40:59 PM] INFO - ############# Config #############
+[09/08/2024 03:40:59 PM] INFO - ### mixed_precision: None
+[09/08/2024 03:40:59 PM] INFO - ### batch_size: 32
+[09/08/2024 03:40:59 PM] INFO - ### eval_batch_size: 32
+[09/08/2024 03:40:59 PM] INFO - ### num_workers: 0
+[09/08/2024 03:40:59 PM] INFO - ### num_epochs: 5
+[09/08/2024 03:40:59 PM] INFO - ### epochs_eval: 5
+[09/08/2024 03:40:59 PM] INFO - ### iteration_logging: 500
+[09/08/2024 03:40:59 PM] INFO - ### model_name: vit
+[09/08/2024 03:40:59 PM] INFO - ### intermidiate_dimensions: None
+[09/08/2024 03:40:59 PM] INFO - ### pretrained: False
+[09/08/2024 03:40:59 PM] INFO - ### compile: False
+[09/08/2024 03:40:59 PM] INFO - ### optimizer: sgd
+[09/08/2024 03:40:59 PM] INFO - ### learning_rate: 0.0005
+[09/08/2024 03:40:59 PM] INFO - ### dataset: /home/upc/upc580327/lab1/micro-224
+[09/08/2024 03:40:59 PM] INFO - ### resolution: 224
+[09/08/2024 03:40:59 PM] INFO - ### Device: cuda
+[09/08/2024 03:40:59 PM] INFO - ### AMP Enabled: False
+[09/08/2024 03:40:59 PM] INFO - ### Total number of parameters 631021000
+[09/08/2024 03:40:59 PM] INFO - ### Total training samples (batches): 12480 (390)
+[09/08/2024 03:40:59 PM] INFO - ### Total validation samples (batches): 9984 (312)
+[09/08/2024 03:40:59 PM] INFO - ##################################
+[09/08/2024 03:40:59 PM] INFO - [EPOCH: 1] Starting training loop...
+[09/08/2024 03:43:37 PM] INFO - [EPOCH: 1] Training throughput: 78.749 imgs/s
+[09/08/2024 03:43:37 PM] INFO - [EPOCH: 2] Starting training loop...
+[09/08/2024 03:46:03 PM] INFO - [EPOCH: 2] Training throughput: 85.340 imgs/s
+[09/08/2024 03:46:03 PM] INFO - [EPOCH: 3] Starting training loop...
+[09/08/2024 03:48:29 PM] INFO - [EPOCH: 3] Training throughput: 85.377 imgs/s
+[09/08/2024 03:48:29 PM] INFO - [EPOCH: 4] Starting training loop...
+[09/08/2024 03:50:56 PM] INFO - [EPOCH: 4] Training throughput: 85.401 imgs/s
+[09/08/2024 03:50:56 PM] INFO - [EPOCH: 5] Starting training loop...
+[09/08/2024 03:53:22 PM] INFO - [EPOCH: 5] Training throughput: 85.403 imgs/s
+[09/08/2024 03:53:22 PM] INFO - [EPOCH: 5] Starting validation loop...
+[09/08/2024 03:53:58 PM] INFO - [EPOCH: 5] Accuracy: 0.017 | Validation throughput: 274.106 imgs/s
+[09/08/2024 03:53:58 PM] INFO - Training finished!
+[09/08/2024 03:53:58 PM] INFO - Complete training Time: 779.5861036777496 | Training throughput: 85.380 imgs/s | Validation throughput: 274.106 imgs/s
+[09/08/2024 03:53:58 PM] INFO - GPU memory (GB) | allocated: 4.847 | max allocated: 24.148 | reserved: 24.672 | max reserved: 24.672
+END TIME: Sun Sep  8 05:53:59 PM CEST 2024

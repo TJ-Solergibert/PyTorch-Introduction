@@ -1,0 +1,46 @@
++ module purge
++ local __lmod_my_status
++ local __lmod_sh_dbg
++ '[' -z '' ']'
++ case "$-" in
++ __lmod_sh_dbg=x
++ '[' -n x ']'
++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+unload bsc/1.0 (PATH, MANPATH)
+Shell debugging restarted
++ return 0
++ module load singularity
++ local __lmod_my_status
++ local __lmod_sh_dbg
++ '[' -z '' ']'
++ case "$-" in
++ __lmod_sh_dbg=x
++ '[' -n x ']'
++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+load SINGULARITY/4.1.5 (PATH)
+Shell debugging restarted
++ return 0
++ MODEL=vit
++ DS=/home/upc/upc580327/lab1/micro-224
++ EPOCHS=5
++ BS=64
++ NW=0
++ OPTIM=sgd
++ LOG_ITER=500
++ PYTHON_FILE=/home/upc/upc580327/lab1/train.py
++ PYTHON_ARGS='--model_name vit     --dataset /home/upc/upc580327/lab1/micro-224     --num_epochs 5     --batch_size 64     --eval_batch_size 64     --num_workers 0     --optimizer sgd     --iteration_logging 500     '
++ export 'CMD=python3 /home/upc/upc580327/lab1/train.py --model_name vit     --dataset /home/upc/upc580327/lab1/micro-224     --num_epochs 5     --batch_size 64     --eval_batch_size 64     --num_workers 0     --optimizer sgd     --iteration_logging 500     '
++ CMD='python3 /home/upc/upc580327/lab1/train.py --model_name vit     --dataset /home/upc/upc580327/lab1/micro-224     --num_epochs 5     --batch_size 64     --eval_batch_size 64     --num_workers 0     --optimizer sgd     --iteration_logging 500     '
++ SINGULARITY_CONTAINER=/gpfs/apps/MN5/ACC/SINGULARITY/SRC/images/nvidiaPytorch24.07
++ SINGULARITY_ARGS='     --bind /home/upc/upc580327/lab1     --nv     /gpfs/apps/MN5/ACC/SINGULARITY/SRC/images/nvidiaPytorch24.07     '
++ SRUN_ARGS='     --cpus-per-task 20     --jobid 5334393     '
++ srun --cpus-per-task 20 --jobid 5334393 bsc_singularity exec --bind /home/upc/upc580327/lab1 --nv /gpfs/apps/MN5/ACC/SINGULARITY/SRC/images/nvidiaPytorch24.07 bash -c 'python3 /home/upc/upc580327/lab1/train.py --model_name vit     --dataset /home/upc/upc580327/lab1/micro-224     --num_epochs 5     --batch_size 64     --eval_batch_size 64     --num_workers 0     --optimizer sgd     --iteration_logging 500     '
+WARNING: underlay of /etc/localtime required more than 50 (94) bind mounts
+WARNING: underlay of /usr/bin/nvidia-smi required more than 50 (477) bind mounts
+/usr/bin/rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+++ date
++ echo 'END TIME: Sun Sep  8 05:53:35 PM CEST 2024'

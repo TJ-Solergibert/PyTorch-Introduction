@@ -1,0 +1,153 @@
++ module purge
++ local __lmod_my_status
++ local __lmod_sh_dbg
++ '[' -z '' ']'
++ case "$-" in
++ __lmod_sh_dbg=x
++ '[' -n x ']'
++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+unload bsc/1.0 (PATH, MANPATH)
+Shell debugging restarted
++ return 0
++ module load singularity
++ local __lmod_my_status
++ local __lmod_sh_dbg
++ '[' -z '' ']'
++ case "$-" in
++ __lmod_sh_dbg=x
++ '[' -n x ']'
++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+load SINGULARITY/4.1.5 (PATH)
+Shell debugging restarted
++ return 0
++ GPUS_PER_NODE=4
+++ scontrol show hostnames 'as03r5b[22-23]'
+++ head -n 1
++ MASTER_ADDR=as03r5b22
++ MASTER_PORT=6000
++ MODEL=vit
++ DS=/home/upc/upc580327/lab1/tiny-224
++ EPOCHS=5
++ BS=128
++ NW=10
++ OPTIM=adamw
++ LAUNCHER='torchrun     --nproc_per_node 4     --nnodes 2     --node_rank $SLURM_PROCID     --rdzv_endpoint as03r5b22:6000     --rdzv_backend c10d     --max_restarts 0     --tee 3     '
++ PYTHON_FILE=/home/upc/upc580327/lab1/train_ddp.py
++ PYTHON_ARGS='--model_name vit     --dataset /home/upc/upc580327/lab1/tiny-224     --num_epochs 5     --batch_size 128     --eval_batch_size 128     --num_workers 10     --optimizer adamw     --mixed_precision bf16     --compile     '
++ export 'CMD=torchrun     --nproc_per_node 4     --nnodes 2     --node_rank $SLURM_PROCID     --rdzv_endpoint as03r5b22:6000     --rdzv_backend c10d     --max_restarts 0     --tee 3      /home/upc/upc580327/lab1/train_ddp.py --model_name vit     --dataset /home/upc/upc580327/lab1/tiny-224     --num_epochs 5     --batch_size 128     --eval_batch_size 128     --num_workers 10     --optimizer adamw     --mixed_precision bf16     --compile     '
++ CMD='torchrun     --nproc_per_node 4     --nnodes 2     --node_rank $SLURM_PROCID     --rdzv_endpoint as03r5b22:6000     --rdzv_backend c10d     --max_restarts 0     --tee 3      /home/upc/upc580327/lab1/train_ddp.py --model_name vit     --dataset /home/upc/upc580327/lab1/tiny-224     --num_epochs 5     --batch_size 128     --eval_batch_size 128     --num_workers 10     --optimizer adamw     --mixed_precision bf16     --compile     '
++ SINGULARITY_CONTAINER=/gpfs/apps/MN5/ACC/SINGULARITY/SRC/images/nvidiaPytorch24.07
++ SINGULARITY_ARGS='     --bind /home/upc/upc580327/lab1     --nv     /gpfs/apps/MN5/ACC/SINGULARITY/SRC/images/nvidiaPytorch24.07     '
++ SRUN_ARGS='     --cpus-per-task 80     --jobid 5387268     '
++ srun --cpus-per-task 80 --jobid 5387268 bsc_singularity exec --bind /home/upc/upc580327/lab1 --nv /gpfs/apps/MN5/ACC/SINGULARITY/SRC/images/nvidiaPytorch24.07 bash -c 'torchrun     --nproc_per_node 4     --nnodes 2     --node_rank $SLURM_PROCID     --rdzv_endpoint as03r5b22:6000     --rdzv_backend c10d     --max_restarts 0     --tee 3      /home/upc/upc580327/lab1/train_ddp.py --model_name vit     --dataset /home/upc/upc580327/lab1/tiny-224     --num_epochs 5     --batch_size 128     --eval_batch_size 128     --num_workers 10     --optimizer adamw     --mixed_precision bf16     --compile     '
+WARNING: underlay of /etc/localtime required more than 50 (94) bind mounts
+WARNING: underlay of /usr/bin/nvidia-smi required more than 50 (477) bind mounts
+WARNING: underlay of /etc/localtime required more than 50 (94) bind mounts
+WARNING: underlay of /usr/bin/nvidia-smi required more than 50 (477) bind mounts
+/usr/bin/rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+/usr/bin/rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+[default2]:[rank2]:W0908 20:18:15.201000 139738678847296 torch/_logging/_internal.py:1033] [0/0] Profiler function <class 'torch.autograd.profiler.record_function'> will be ignored
+[default3]:[rank3]:W0908 20:18:15.154000 139677340395328 torch/_logging/_internal.py:1033] [0/0] Profiler function <class 'torch.autograd.profiler.record_function'> will be ignored
+[default0]:[rank0]:W0908 20:18:15.124000 139809068586816 torch/_logging/_internal.py:1033] [0/0] Profiler function <class 'torch.autograd.profiler.record_function'> will be ignored
+[default1]:[rank1]:W0908 20:18:15.184000 140331596265280 torch/_logging/_internal.py:1033] [0/0] Profiler function <class 'torch.autograd.profiler.record_function'> will be ignored
+[default1]:[rank5]:W0908 20:18:15.281000 140696057292608 torch/_logging/_internal.py:1033] [0/0] Profiler function <class 'torch.autograd.profiler.record_function'> will be ignored
+[default0]:[rank4]:W0908 20:18:15.282000 140441646139200 torch/_logging/_internal.py:1033] [0/0] Profiler function <class 'torch.autograd.profiler.record_function'> will be ignored
+[default3]:[rank7]:W0908 20:18:15.297000 139634980554560 torch/_logging/_internal.py:1033] [0/0] Profiler function <class 'torch.autograd.profiler.record_function'> will be ignored
+[default2]:[rank6]:W0908 20:18:15.283000 139636618504000 torch/_logging/_internal.py:1033] [0/0] Profiler function <class 'torch.autograd.profiler.record_function'> will be ignored
+[default3]:[rank3]:W0908 20:18:58.835000 139671587989056 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] d0 is not in var_ranges, defaulting to unknown range.
+[default3]:[rank3]:W0908 20:18:58.835000 139671587989056 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] d2 is not in var_ranges, defaulting to unknown range.
+[default3]:[rank3]:W0908 20:18:58.840000 139671587989056 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] d0 is not in var_ranges, defaulting to unknown range.
+[default3]:[rank3]:W0908 20:18:58.840000 139671587989056 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] d1 is not in var_ranges, defaulting to unknown range.
+[default3]:[rank3]:W0908 20:18:58.840000 139671587989056 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] d2 is not in var_ranges, defaulting to unknown range.
+[default0]:[rank0]:W0908 20:18:58.815000 139803832534592 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] d0 is not in var_ranges, defaulting to unknown range.
+[default0]:[rank0]:W0908 20:18:58.816000 139803832534592 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] d2 is not in var_ranges, defaulting to unknown range.
+[default0]:[rank0]:W0908 20:18:58.821000 139803832534592 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] d0 is not in var_ranges, defaulting to unknown range.
+[default0]:[rank0]:W0908 20:18:58.821000 139803832534592 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] d1 is not in var_ranges, defaulting to unknown range.
+[default0]:[rank0]:W0908 20:18:58.821000 139803832534592 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] d2 is not in var_ranges, defaulting to unknown range.
+[default1]:[rank5]:W0908 20:18:58.910000 140691147859520 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] d0 is not in var_ranges, defaulting to unknown range.
+[default1]:[rank5]:W0908 20:18:58.910000 140691147859520 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] d2 is not in var_ranges, defaulting to unknown range.
+[default1]:[rank5]:W0908 20:18:58.915000 140691147859520 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] d1 is not in var_ranges, defaulting to unknown range.
+[default1]:[rank5]:W0908 20:18:58.916000 140691147859520 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] d0 is not in var_ranges, defaulting to unknown range.
+[default1]:[rank5]:W0908 20:18:58.916000 140691147859520 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] d2 is not in var_ranges, defaulting to unknown range.
+[default0]:[rank4]:W0908 20:18:58.894000 140436936345152 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] d0 is not in var_ranges, defaulting to unknown range.
+[default0]:[rank4]:W0908 20:18:58.894000 140436936345152 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] d2 is not in var_ranges, defaulting to unknown range.
+[default0]:[rank4]:W0908 20:18:58.899000 140436936345152 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] d0 is not in var_ranges, defaulting to unknown range.
+[default0]:[rank4]:W0908 20:18:58.900000 140436936345152 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] d2 is not in var_ranges, defaulting to unknown range.
+[default0]:[rank4]:W0908 20:18:58.900000 140436936345152 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] d1 is not in var_ranges, defaulting to unknown range.
+[default3]:[rank3]:W0908 20:18:59.048000 139671587989056 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] q0 is not in var_ranges, defaulting to unknown range.
+[default3]:[rank3]:W0908 20:18:59.048000 139671587989056 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] q2 is not in var_ranges, defaulting to unknown range.
+[default3]:[rank3]:W0908 20:18:59.048000 139671587989056 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] q1 is not in var_ranges, defaulting to unknown range.
+[default3]:[rank3]:W0908 20:18:59.055000 139671587989056 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] q0 is not in var_ranges, defaulting to unknown range.
+[default3]:[rank3]:W0908 20:18:59.055000 139671587989056 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] q2 is not in var_ranges, defaulting to unknown range.
+[default3]:[rank3]:W0908 20:18:59.055000 139671587989056 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] q1 is not in var_ranges, defaulting to unknown range.
+[default0]:[rank0]:W0908 20:18:59.033000 139803832534592 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] q0 is not in var_ranges, defaulting to unknown range.
+[default0]:[rank0]:W0908 20:18:59.034000 139803832534592 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] q1 is not in var_ranges, defaulting to unknown range.
+[default0]:[rank0]:W0908 20:18:59.034000 139803832534592 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] q2 is not in var_ranges, defaulting to unknown range.
+[default0]:[rank0]:W0908 20:18:59.041000 139803832534592 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] q0 is not in var_ranges, defaulting to unknown range.
+[default0]:[rank0]:W0908 20:18:59.041000 139803832534592 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] q1 is not in var_ranges, defaulting to unknown range.
+[default0]:[rank0]:W0908 20:18:59.041000 139803832534592 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] q2 is not in var_ranges, defaulting to unknown range.
+[default1]:[rank5]:W0908 20:18:59.126000 140691147859520 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] q0 is not in var_ranges, defaulting to unknown range.
+[default1]:[rank5]:W0908 20:18:59.126000 140691147859520 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] q2 is not in var_ranges, defaulting to unknown range.
+[default1]:[rank5]:W0908 20:18:59.126000 140691147859520 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] q1 is not in var_ranges, defaulting to unknown range.
+[default1]:[rank5]:W0908 20:18:59.133000 140691147859520 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] q0 is not in var_ranges, defaulting to unknown range.
+[default1]:[rank5]:W0908 20:18:59.133000 140691147859520 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] q2 is not in var_ranges, defaulting to unknown range.
+[default1]:[rank5]:W0908 20:18:59.133000 140691147859520 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] q1 is not in var_ranges, defaulting to unknown range.
+[default0]:[rank4]:W0908 20:18:59.110000 140436936345152 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] q2 is not in var_ranges, defaulting to unknown range.
+[default0]:[rank4]:W0908 20:18:59.110000 140436936345152 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] q0 is not in var_ranges, defaulting to unknown range.
+[default0]:[rank4]:W0908 20:18:59.110000 140436936345152 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] q1 is not in var_ranges, defaulting to unknown range.
+[default0]:[rank4]:W0908 20:18:59.117000 140436936345152 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] q2 is not in var_ranges, defaulting to unknown range.
+[default0]:[rank4]:W0908 20:18:59.117000 140436936345152 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] q0 is not in var_ranges, defaulting to unknown range.
+[default0]:[rank4]:W0908 20:18:59.117000 140436936345152 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] q1 is not in var_ranges, defaulting to unknown range.
+[default1]:[rank1]:W0908 20:18:59.228000 140324957582912 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] d2 is not in var_ranges, defaulting to unknown range.
+[default1]:[rank1]:W0908 20:18:59.228000 140324957582912 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] d0 is not in var_ranges, defaulting to unknown range.
+[default1]:[rank1]:W0908 20:18:59.234000 140324957582912 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] d2 is not in var_ranges, defaulting to unknown range.
+[default1]:[rank1]:W0908 20:18:59.234000 140324957582912 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] d0 is not in var_ranges, defaulting to unknown range.
+[default1]:[rank1]:W0908 20:18:59.234000 140324957582912 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] d1 is not in var_ranges, defaulting to unknown range.
+[default3]:[rank7]:W0908 20:18:59.328000 139628111722048 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] d0 is not in var_ranges, defaulting to unknown range.
+[default3]:[rank7]:W0908 20:18:59.328000 139628111722048 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] d2 is not in var_ranges, defaulting to unknown range.
+[default3]:[rank7]:W0908 20:18:59.333000 139628111722048 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] d0 is not in var_ranges, defaulting to unknown range.
+[default3]:[rank7]:W0908 20:18:59.334000 139628111722048 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] d1 is not in var_ranges, defaulting to unknown range.
+[default3]:[rank7]:W0908 20:18:59.334000 139628111722048 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] d2 is not in var_ranges, defaulting to unknown range.
+[default2]:[rank2]:W0908 20:18:59.299000 139733140231744 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] d0 is not in var_ranges, defaulting to unknown range.
+[default2]:[rank2]:W0908 20:18:59.299000 139733140231744 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] d2 is not in var_ranges, defaulting to unknown range.
+[default2]:[rank2]:W0908 20:18:59.304000 139733140231744 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] d0 is not in var_ranges, defaulting to unknown range.
+[default2]:[rank2]:W0908 20:18:59.304000 139733140231744 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] d2 is not in var_ranges, defaulting to unknown range.
+[default2]:[rank2]:W0908 20:18:59.304000 139733140231744 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] d1 is not in var_ranges, defaulting to unknown range.
+[default2]:[rank6]:W0908 20:18:59.306000 139630115542592 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] d2 is not in var_ranges, defaulting to unknown range.
+[default2]:[rank6]:W0908 20:18:59.307000 139630115542592 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] d0 is not in var_ranges, defaulting to unknown range.
+[default2]:[rank6]:W0908 20:18:59.312000 139630115542592 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] d2 is not in var_ranges, defaulting to unknown range.
+[default2]:[rank6]:W0908 20:18:59.312000 139630115542592 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] d0 is not in var_ranges, defaulting to unknown range.
+[default2]:[rank6]:W0908 20:18:59.312000 139630115542592 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] d1 is not in var_ranges, defaulting to unknown range.
+[default1]:[rank1]:W0908 20:18:59.439000 140324957582912 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] q1 is not in var_ranges, defaulting to unknown range.
+[default1]:[rank1]:W0908 20:18:59.439000 140324957582912 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] q2 is not in var_ranges, defaulting to unknown range.
+[default1]:[rank1]:W0908 20:18:59.439000 140324957582912 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] q0 is not in var_ranges, defaulting to unknown range.
+[default1]:[rank1]:W0908 20:18:59.445000 140324957582912 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] q1 is not in var_ranges, defaulting to unknown range.
+[default1]:[rank1]:W0908 20:18:59.446000 140324957582912 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] q2 is not in var_ranges, defaulting to unknown range.
+[default1]:[rank1]:W0908 20:18:59.446000 140324957582912 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] q0 is not in var_ranges, defaulting to unknown range.
+[default3]:[rank7]:W0908 20:18:59.541000 139628111722048 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] q0 is not in var_ranges, defaulting to unknown range.
+[default3]:[rank7]:W0908 20:18:59.541000 139628111722048 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] q1 is not in var_ranges, defaulting to unknown range.
+[default3]:[rank7]:W0908 20:18:59.541000 139628111722048 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] q2 is not in var_ranges, defaulting to unknown range.
+[default3]:[rank7]:W0908 20:18:59.548000 139628111722048 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] q0 is not in var_ranges, defaulting to unknown range.
+[default3]:[rank7]:W0908 20:18:59.548000 139628111722048 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] q1 is not in var_ranges, defaulting to unknown range.
+[default3]:[rank7]:W0908 20:18:59.548000 139628111722048 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] q2 is not in var_ranges, defaulting to unknown range.
+[default2]:[rank2]:W0908 20:18:59.514000 139733140231744 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] q1 is not in var_ranges, defaulting to unknown range.
+[default2]:[rank2]:W0908 20:18:59.514000 139733140231744 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] q2 is not in var_ranges, defaulting to unknown range.
+[default2]:[rank2]:W0908 20:18:59.514000 139733140231744 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] q0 is not in var_ranges, defaulting to unknown range.
+[default2]:[rank2]:W0908 20:18:59.521000 139733140231744 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] q1 is not in var_ranges, defaulting to unknown range.
+[default2]:[rank2]:W0908 20:18:59.521000 139733140231744 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] q2 is not in var_ranges, defaulting to unknown range.
+[default2]:[rank2]:W0908 20:18:59.521000 139733140231744 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] q0 is not in var_ranges, defaulting to unknown range.
+[default2]:[rank6]:W0908 20:18:59.522000 139630115542592 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] q1 is not in var_ranges, defaulting to unknown range.
+[default2]:[rank6]:W0908 20:18:59.522000 139630115542592 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] q0 is not in var_ranges, defaulting to unknown range.
+[default2]:[rank6]:W0908 20:18:59.522000 139630115542592 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] q2 is not in var_ranges, defaulting to unknown range.
+[default2]:[rank6]:W0908 20:18:59.529000 139630115542592 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] q1 is not in var_ranges, defaulting to unknown range.
+[default2]:[rank6]:W0908 20:18:59.529000 139630115542592 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] q0 is not in var_ranges, defaulting to unknown range.
+[default2]:[rank6]:W0908 20:18:59.529000 139630115542592 torch/fx/experimental/symbolic_shapes.py:4424] [1/0] q2 is not in var_ranges, defaulting to unknown range.
+W0908 20:28:19.146000 139944597661248 torch/distributed/elastic/rendezvous/dynamic_rendezvous.py:1266] The node 'as03r5b23.bsc.mn_1280237_0' has failed to send a keep-alive heartbeat to the rendezvous 'none' due to an error of type RendezvousTimeoutError.
+++ date
++ echo 'END TIME: Sun Sep  8 10:28:19 PM CEST 2024'
